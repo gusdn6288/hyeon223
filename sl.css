@@ -1,0 +1,114 @@
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('bg.png');
+  background-size: cover; /* 배경 이미지를 화면에 꽉 차게 */
+  background-position: center; /* 이미지를 화면 중앙에 위치 */
+  background-repeat: no-repeat; /* 이미지 반복 금지 */
+
+}
+.container {
+  width: 100%;
+  height: 100%;
+  perspective: 500px; /* 원근감 */
+  transform-style: preserve-3d; /* 3D 표현 */
+}
+
+.slide {
+  transition: 1s; /* 슬라이드 전환 속도 */
+  width: 1000px;
+  height: 800px;
+  border-radius: 20px; /* 부드러운 모서리 */
+  position: absolute;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  padding: 20px;
+  border-color: blue;
+
+}
+
+.slide:nth-of-type(1) {
+  transform: translate(calc(-100% * 1.5), -50%) translateZ(-100px);
+}
+.slide:nth-of-type(2) {
+  transform: translate(-50%, -50%) translateZ(50px);
+}
+.slide:nth-of-type(3) {
+  transform: translate(calc(-25% * -1.5), -50%) translateZ(-100px);
+}
+
+.slide:nth-of-type(1) {
+  transform: translate3d(-150%, -50%, 0);
+}
+/* 버튼 스타일 */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  font-size: 30px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 50%; /* 원형 버튼 */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  transform: translateY(-75%) scale(1.1); /* 크기 확대 */
+}
+button.next {
+  left: 300px;
+}
+button.prev {
+ 
+  right: 300px;
+}
+
+/* 슬라이드 내부 콘텐츠 */
+.content {
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  margin: 5%;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p, ul {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+h1{
+  font-size:44pt;
+  
+}
+.hd{
+  width: 100%;
+  height: 100%;
+}
+
